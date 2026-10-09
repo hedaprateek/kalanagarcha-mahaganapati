@@ -27,9 +27,8 @@ Node.js 22 or newer is required for the local editor. No npm install is needed.
 8. Follow the deployment-progress link. The site updates after GitHub Pages finishes.
 
 The repository is `hedaprateek/kalanagarcha-mahaganapati`, branch `main`.
-It has been created on GitHub. The first full upload and Pages activation are pending
-because the current organization's network blocks JavaScript uploads. Use a network
-approved for GitHub publishing, or ask IT to permit these uploads, before retrying.
+The public website is hosted with GitHub Pages at
+https://hedaprateek.github.io/kalanagarcha-mahaganapati/.
 You can change the account and repository in the publication window. If the repository
 does not exist, the review explicitly says that a new public repository will be created.
 
