@@ -1,0 +1,921 @@
+{
+  "sections": [
+    {
+      "title": "Mandal details",
+      "icon": "✦",
+      "description": "Your public name, introduction, location, and contact details. English and Marathi are editable side by side.",
+      "fields": [
+        {
+          "path": [
+            "name"
+          ],
+          "label": "Mandal name",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "about"
+          ],
+          "label": "About the mandal",
+          "type": "localized",
+          "multiline": true
+        },
+        {
+          "path": [
+            "festivalLabel"
+          ],
+          "label": "Festival dates or date announcement",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "morningAarti"
+          ],
+          "label": "Morning aarti time",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "eveningAarti"
+          ],
+          "label": "Evening aarti time",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "address"
+          ],
+          "label": "Venue / address",
+          "type": "localized",
+          "multiline": true
+        },
+        {
+          "path": [
+            "mapsUrl"
+          ],
+          "label": "Google Maps link",
+          "type": "url",
+          "help": "Optional. Use a link beginning with https://."
+        },
+        {
+          "path": [
+            "contactEmail"
+          ],
+          "label": "Official contact email",
+          "type": "email"
+        },
+        {
+          "path": [
+            "defaultLanguage"
+          ],
+          "label": "Default website language",
+          "type": "select",
+          "options": [
+            {
+              "value": "en",
+              "label": "English"
+            },
+            {
+              "value": "mr",
+              "label": "Marathi"
+            }
+          ]
+        },
+        {
+          "path": [
+            "sampleContent"
+          ],
+          "label": "Show sample-content labels",
+          "type": "boolean",
+          "help": "Keep this enabled until you have replaced the sample programme, notices, and archive with confirmed information."
+        }
+      ]
+    },
+    {
+      "collection": "programme",
+      "title": "Festival programme",
+      "icon": "☀",
+      "description": "Add daily events. The website sorts them by day and time, and visitors can filter or download the programme.",
+      "fields": [
+        {
+          "path": [
+            "day"
+          ],
+          "label": "Festival day",
+          "type": "number",
+          "min": 1,
+          "max": 30
+        },
+        {
+          "path": [
+            "time"
+          ],
+          "label": "Event time",
+          "type": "time"
+        },
+        {
+          "path": [
+            "category"
+          ],
+          "label": "Event category",
+          "type": "select",
+          "options": [
+            {
+              "value": "devotional",
+              "label": "Devotional"
+            },
+            {
+              "value": "cultural",
+              "label": "Cultural"
+            },
+            {
+              "value": "community",
+              "label": "Community"
+            }
+          ]
+        },
+        {
+          "path": [
+            "title"
+          ],
+          "label": "Event title",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "description"
+          ],
+          "label": "Event description",
+          "type": "localized",
+          "multiline": true
+        }
+      ],
+      "template": {
+        "id": "",
+        "day": 1,
+        "time": "19:00",
+        "category": "devotional",
+        "title": {
+          "en": "New event",
+          "mr": "नवा कार्यक्रम"
+        },
+        "description": {
+          "en": "",
+          "mr": ""
+        }
+      },
+      "addLabel": "Add event"
+    },
+    {
+      "collection": "notices",
+      "title": "Announcements",
+      "icon": "☷",
+      "description": "Publish announcements and notices. The detailed message opens when a visitor selects a notice.",
+      "fields": [
+        {
+          "path": [
+            "category"
+          ],
+          "label": "Notice category",
+          "type": "select",
+          "options": [
+            {
+              "value": "festival",
+              "label": "Festival"
+            },
+            {
+              "value": "cultural",
+              "label": "Cultural"
+            },
+            {
+              "value": "community",
+              "label": "Community"
+            }
+          ]
+        },
+        {
+          "path": [
+            "date"
+          ],
+          "label": "Date or short label",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "title"
+          ],
+          "label": "Notice title",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "summary"
+          ],
+          "label": "Short summary",
+          "type": "localized",
+          "multiline": true
+        },
+        {
+          "path": [
+            "body"
+          ],
+          "label": "Full notice",
+          "type": "localized",
+          "multiline": true
+        }
+      ],
+      "template": {
+        "id": "",
+        "category": "festival",
+        "date": {
+          "en": "New announcement",
+          "mr": "नवी सूचना"
+        },
+        "title": {
+          "en": "New notice",
+          "mr": "नवी सूचना"
+        },
+        "summary": {
+          "en": "",
+          "mr": ""
+        },
+        "body": {
+          "en": "",
+          "mr": ""
+        }
+      },
+      "addLabel": "Add announcement"
+    },
+    {
+      "collection": "gallery",
+      "title": "Year-wise gallery",
+      "icon": "▧",
+      "description": "Add real photographs by year. Add an optional video link to each memory. Years appear automatically in the gallery.",
+      "fields": [
+        {
+          "path": [
+            "year"
+          ],
+          "label": "Celebration year",
+          "type": "number",
+          "min": 1900,
+          "max": 2200
+        },
+        {
+          "path": [
+            "title"
+          ],
+          "label": "Memory title",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "category"
+          ],
+          "label": "Category / occasion",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "image"
+          ],
+          "label": "Photograph",
+          "type": "image"
+        },
+        {
+          "path": [
+            "alt"
+          ],
+          "label": "Image description (for accessibility)",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "description"
+          ],
+          "label": "Story behind the memory",
+          "type": "localized",
+          "multiline": true
+        },
+        {
+          "path": [
+            "videoUrl"
+          ],
+          "label": "Optional video link",
+          "type": "url"
+        }
+      ],
+      "template": {
+        "id": "",
+        "year": 2026,
+        "title": {
+          "en": "New memory",
+          "mr": "नवी आठवण"
+        },
+        "category": {
+          "en": "Celebration",
+          "mr": "उत्सव"
+        },
+        "image": "assets/ganpati.svg",
+        "alt": {
+          "en": "",
+          "mr": ""
+        },
+        "description": {
+          "en": "",
+          "mr": ""
+        },
+        "videoUrl": ""
+      },
+      "addLabel": "Add memory"
+    },
+    {
+      "collection": "visitors",
+      "title": "Celebrity & guest visits",
+      "icon": "♧",
+      "description": "Add only verified visits. Each record can include a photograph, role, visit date, story, and video.",
+      "fields": [
+        {
+          "path": [
+            "name"
+          ],
+          "label": "Guest / celebrity name",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "role"
+          ],
+          "label": "Profession or role",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "date"
+          ],
+          "label": "Visit date",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "image"
+          ],
+          "label": "Guest photograph",
+          "type": "image"
+        },
+        {
+          "path": [
+            "story"
+          ],
+          "label": "About the visit",
+          "type": "localized",
+          "multiline": true
+        },
+        {
+          "path": [
+            "videoUrl"
+          ],
+          "label": "Optional video link",
+          "type": "url"
+        }
+      ],
+      "template": {
+        "name": {
+          "en": "Guest name",
+          "mr": "पाहुण्याचे नाव"
+        },
+        "role": {
+          "en": "",
+          "mr": ""
+        },
+        "date": {
+          "en": "",
+          "mr": ""
+        },
+        "image": "",
+        "story": {
+          "en": "",
+          "mr": ""
+        },
+        "videoUrl": ""
+      },
+      "addLabel": "Add guest visit"
+    },
+    {
+      "collection": "sponsors",
+      "title": "Sponsors & advertisements",
+      "icon": "◇",
+      "description": "Add sponsor names, logos, advertising text, and website links. Entries without a logo show a text wordmark.",
+      "fields": [
+        {
+          "path": [
+            "tier"
+          ],
+          "label": "Sponsor tier / advertisement label",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "name"
+          ],
+          "label": "Business / sponsor name",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "image"
+          ],
+          "label": "Logo or advertisement image",
+          "type": "image"
+        },
+        {
+          "path": [
+            "description"
+          ],
+          "label": "Advertisement text",
+          "type": "localized",
+          "multiline": true
+        },
+        {
+          "path": [
+            "url"
+          ],
+          "label": "Business website link",
+          "type": "url"
+        },
+        {
+          "path": [
+            "placeholder"
+          ],
+          "label": "This is an available advertising space",
+          "type": "boolean",
+          "help": "Available spaces display an enquiry link. Turn this off when a sponsor is confirmed."
+        }
+      ],
+      "template": {
+        "id": "",
+        "tier": {
+          "en": "Supporter",
+          "mr": "सहयोगी"
+        },
+        "name": {
+          "en": "Business name",
+          "mr": "व्यवसायाचे नाव"
+        },
+        "image": "",
+        "description": {
+          "en": "",
+          "mr": ""
+        },
+        "url": "",
+        "placeholder": false
+      },
+      "addLabel": "Add sponsor / ad"
+    },
+    {
+      "title": "Headings & page text",
+      "icon": "¶",
+      "description": "Edit the website’s headings, introductions, visitor guidance, and frequently asked questions.",
+      "fields": [
+        {
+          "path": [
+            "copy",
+            "heroLineOne"
+          ],
+          "label": "Hero Line One",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "heroLineTwo"
+          ],
+          "label": "Hero Line Two",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "heroDescription"
+          ],
+          "label": "Hero Description",
+          "type": "localized",
+          "multiline": true
+        },
+        {
+          "path": [
+            "copy",
+            "heroWelcome"
+          ],
+          "label": "Hero Welcome",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "heroWelcomeDetail"
+          ],
+          "label": "Hero Welcome Detail",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "aboutTitleOne"
+          ],
+          "label": "About Title One",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "aboutTitleTwo"
+          ],
+          "label": "About Title Two",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "aboutDetail"
+          ],
+          "label": "About Detail",
+          "type": "localized",
+          "multiline": true
+        },
+        {
+          "path": [
+            "copy",
+            "valueDevotion"
+          ],
+          "label": "Value Devotion",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "valueDevotionText"
+          ],
+          "label": "Value Devotion Text",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "valueCulture"
+          ],
+          "label": "Value Culture",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "valueCultureText"
+          ],
+          "label": "Value Culture Text",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "valueCommunity"
+          ],
+          "label": "Value Community",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "valueCommunityText"
+          ],
+          "label": "Value Community Text",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "programmeTitle"
+          ],
+          "label": "Programme Title",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "programmeNote"
+          ],
+          "label": "Programme Note",
+          "type": "localized",
+          "multiline": true
+        },
+        {
+          "path": [
+            "copy",
+            "updatesTitle"
+          ],
+          "label": "Updates Title",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "updatesIntro"
+          ],
+          "label": "Updates Intro",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "galleryTitleOne"
+          ],
+          "label": "Gallery Title One",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "galleryTitleTwo"
+          ],
+          "label": "Gallery Title Two",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "galleryIntro"
+          ],
+          "label": "Gallery Intro",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "visitorsTitleOne"
+          ],
+          "label": "Visitors Title One",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "visitorsTitleTwo"
+          ],
+          "label": "Visitors Title Two",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "visitorsIntro"
+          ],
+          "label": "Visitors Intro",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "visitorsNote"
+          ],
+          "label": "Visitors Note",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "sponsorsTitle"
+          ],
+          "label": "Sponsors Title",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "sponsorsIntro"
+          ],
+          "label": "Sponsors Intro",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "adTitle"
+          ],
+          "label": "Ad Title",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "adText"
+          ],
+          "label": "Ad Text",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "visitTitleOne"
+          ],
+          "label": "Visit Title One",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "visitTitleTwo"
+          ],
+          "label": "Visit Title Two",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "visitIntro"
+          ],
+          "label": "Visit Intro",
+          "type": "localized",
+          "multiline": true
+        },
+        {
+          "path": [
+            "copy",
+            "visitGuidanceTitle"
+          ],
+          "label": "Visit Guidance Title",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "visitTipOne"
+          ],
+          "label": "Visit Tip One",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "visitTipTwo"
+          ],
+          "label": "Visit Tip Two",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "visitTipThree"
+          ],
+          "label": "Visit Tip Three",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "contactTitle"
+          ],
+          "label": "Contact Title",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "contactIntro"
+          ],
+          "label": "Contact Intro",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "faqTitle"
+          ],
+          "label": "Faq Title",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "faqOne"
+          ],
+          "label": "Faq One",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "faqOneAnswer"
+          ],
+          "label": "Faq One Answer",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "faqTwo"
+          ],
+          "label": "Faq Two",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "faqTwoAnswer"
+          ],
+          "label": "Faq Two Answer",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "faqThree"
+          ],
+          "label": "Faq Three",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "faqThreeAnswer"
+          ],
+          "label": "Faq Three Answer",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "footerTagline"
+          ],
+          "label": "Footer Tagline",
+          "type": "localized",
+          "multiline": false
+        },
+        {
+          "path": [
+            "copy",
+            "footerNote"
+          ],
+          "label": "Footer Note",
+          "type": "localized",
+          "multiline": false
+        }
+      ]
+    }
+  ]
+}

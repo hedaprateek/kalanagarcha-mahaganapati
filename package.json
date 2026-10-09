@@ -1,0 +1,15 @@
+{
+  "name": "ganpati-mandal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A traditional, bilingual Ganpati mandal website with programmes, notices, sponsors, visitors, and yearly showcases.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node --check app.js && node --check site.config.js && node --check server.mjs && node --check editor/server.mjs && node --check editor/editor.js",
+    "test": "node --test editor/editor.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
